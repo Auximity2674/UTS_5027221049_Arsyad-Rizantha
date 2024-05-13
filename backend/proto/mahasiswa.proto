@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package mahasiswa;
+
+service MahasiswaService {
+    rpc GetVehicle(MahasiswaRequest) returns (MahasiswaResponse);
+    rpc CreateVehicle(MahasiswaCreateRequest) returns (MahasiswaResponse);
+    rpc UpdateVehicle(MahasiswaCreateRequest) returns (MahasiswaResponse);
+    rpc DeleteVehicle(MahasiswaRequest) returns (MahasiswaResponse);
+    rpc ListVehicles(empty) returns (MahasiswaList);
+}
+
+message Mahasiswa {
+    string name = 1;
+    string NRP = 2;
+    string departement = 3;
+    string university = 4;
+    int year = 5;
+}
+
+message MahasiswaList {
+    repeated Mahasiswa mahasiswa = 1;
+}
+
+message MahasiswaRequest {
+    string id = 1;
+}
+
+message MahasiswaCreateRequest {
+    string NRP = 1;
+    string departement = 2;
+    string university = 3;
+    int year = 4;
+}
+
+message MahasiswaUpdateRequest {
+    string name = 1;
+    string NRP = 2;
+    string departement = 3;
+    string university = 4;
+    int year = 5;
+}
+
+message MahasiswaResponse {
+    Mahasiswa mahasiswa = 1;
+}
+
