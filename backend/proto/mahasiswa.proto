@@ -3,11 +3,11 @@ syntax = "proto3";
 package mahasiswa;
 
 service MahasiswaService {
-    rpc GetVehicle(MahasiswaRequest) returns (MahasiswaResponse);
-    rpc CreateVehicle(MahasiswaCreateRequest) returns (MahasiswaResponse);
-    rpc UpdateVehicle(MahasiswaCreateRequest) returns (MahasiswaResponse);
-    rpc DeleteVehicle(MahasiswaRequest) returns (MahasiswaResponse);
-    rpc ListVehicles(empty) returns (MahasiswaList);
+    rpc GetMahasiswa(MahasiswaRequest) returns (MahasiswaResponse);
+    rpc CreateMahasiswa(MahasiswaCreateRequest) returns (MahasiswaResponse);
+    rpc UpdateMahasiswa(MahasiswaCreateRequest) returns (MahasiswaResponse);
+    rpc DeleteMahasiswa(MahasiswaRequest) returns (MahasiswaResponse);
+    rpc ListMahasiswas(empty) returns (MahasiswaList);
 }
 
 message Mahasiswa {
